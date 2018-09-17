@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on UCR Particle Theory</title>
+    <link>http://theory.ucr.edu/home/</link>
+    <description>Recent content in Homes on UCR Particle Theory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 UCR Physics &amp; Astronomy</copyright>
+    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://theory.ucr.edu/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>http://theory.ucr.edu/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/about/</guid>
+      <description>Our group focuses on particle and astro-particle physics beyond the Standard Model. We focus on theories and signatures of dark matter, neutrinos, and cosmology. Our specialties include self-interacting dark matter, neutrino flavor symmetries, baryogenesis, collider searches of new physics, and models of Higgs naturalness. Recent papers.</description>
+    </item>
+    
+    <item>
+      <title>Social</title>
+      <link>http://theory.ucr.edu/home/social/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/social/</guid>
+      <description>Tweets by UCR_HEP_Theory  -- Tweets by UCR HEP Theory   </description>
+    </item>
+    
+    <item>
+      <title>Events</title>
+      <link>http://theory.ucr.edu/home/seminars/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/seminars/</guid>
+      <description>  
+  </description>
+    </item>
+    
+    <item>
+      <title>Faculty</title>
+      <link>http://theory.ucr.edu/home/faculty/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/faculty/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Faculty</title>
+      <link>http://theory.ucr.edu/home/facultyaff/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/facultyaff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Staff</title>
+      <link>http://theory.ucr.edu/home/staff/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/staff/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Students</title>
+      <link>http://theory.ucr.edu/home/students/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/students/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Students</title>
+      <link>http://theory.ucr.edu/home/studentsug/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/studentsug/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Research</title>
+      <link>http://theory.ucr.edu/home/research/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>http://theory.ucr.edu/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://theory.ucr.edu/home/contact/</guid>
+      <description>We are located in the Physics and Astronomy building. The nearest parking is lot 13, one may purchase a parking permit from the university kiosk. Please contact your host to arrange board.</description>
+    </item>
+    
+  </channel>
+</rss>
