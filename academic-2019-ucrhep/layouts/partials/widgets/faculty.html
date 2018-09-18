@@ -13,6 +13,7 @@
 
   {{ with $page.Params.mygroup }}
     {{ range .faculty }}
+    {{ if not .past }}
       <div class="col-6 col-sm-4" style="padding: 10px 10px 25px 10px; text-align: center; line-height: 93%;">
         {{ if .website }}<a href="{{ .website }}">{{ end }}
           <img class="incircle" src="{{ .photo }}">
@@ -81,13 +82,61 @@
           {{ end }}
           <!--  -->
       </div>
+    {{ end }} <!-- if not .past -->
     {{ end }} <!--  range .faculty  -->
   {{ end }} <!-- with $page.Params.mygroup -->
 
-  <!--  LIST OF FACULTY  -->
+</div> <!-- row, line 11 -->
+
+<!--  /LIST OF FACULTY  -->
+
+{{ if $page.Params.haspast }}
+<div class="row">
+  <h5 style="color:gray;">
+    {{ with $page.Params.recenttitle }}{{ . | markdownify }}{{ end }}
+  </h5>
+</div>
+{{ end }}
+
+
+<!--  LIST OF PAST STUDENTS  -->
+<div class="row">
+{{ with $page.Params.mygroup }}
+  {{ range .faculty }}
+    {{ if .past }}
+<!--  -->
+          <div class="col-2 col-sm-2" style="padding: 10px 10px 25px 10px; text-align: center; font-size: 0.6rem; line-height: 93%;">
+            {{ if .inspire }}<a href="{{ .inspire }}">{{ end }}
+              <img
+                class="incircle"
+                style=" -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+                        filter: grayscale(100%);"
+                        src="{{ .photo }}">
+            {{ if .inspire }}</a>{{ end }}
+            <br />
+                {{ .name }}
+            <!--  -->
+            <br />
+            <span class="comment" style="font-size: 0.5rem;">
+              ({{ if .adviser }}{{ .adviser }},{{ end }}
+              {{ if .start }}{{ .start }} - {{ end }}
+              {{ if .end }}{{ .end }}{{ end }})
+            </span>
+
+            <!--  -->
+          </div>
+<!--  -->
+    {{ end }} <!-- if not .past -->
+  {{ end }} <!--  range .faculty  -->
+{{ end }} <!-- with $page.Params.mygroup -->
+</div> <!-- row on line 106 -->
+<!--  /LIST OF PAST STUDENTS  -->
+
+
+
 
   {{ $page.Content }}
-  </div></div> <!-- col-12 col-md-8 and row-->
+  </div> <!-- col-12 col-md-8-->
 
 {{ else }} <!-- if-else $page.title -->
   <div class="col-12">

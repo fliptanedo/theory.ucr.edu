@@ -7,8 +7,8 @@ date = "2016-04-20T00:00:00"
 title = "Faculty"
 subtitle = "Particle Theory"
 
-haspast = false
-recenttitle = "Emeritus"
+haspast = true
+recenttitle = "Emeritus Faculty"
 
 # Order that this section will appear in.
 weight = 20
@@ -39,6 +39,7 @@ weight = 20
   googlescholar = ""
   github = ""
   twitter = ""
+  past = true
 
 [[mygroup.faculty]]
   name = "Ernest Ma"
@@ -52,6 +53,7 @@ weight = 20
   googlescholar = ""
   github = ""
   twitter = ""
+  past = true
 
 [[mygroup.faculty]]
   name = "Flip Tanedo"

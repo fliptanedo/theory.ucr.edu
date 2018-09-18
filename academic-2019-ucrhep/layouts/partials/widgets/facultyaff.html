@@ -90,10 +90,10 @@
 
 <!--  /LIST OF FACULTY  -->
 
-{{ if $page.Params.haspast }}
+{{ if .Params.haspast }}
 <div class="row">
   <h5 style="color:gray;">
-    {{ with $page.Params.recenttitle }}{{ . | markdownify }}{{ end }}
+    {{ with .Params.recenttitle }}{{ . | markdownify }}{{ end }}
   </h5>
 </div>
 {{ end }}
