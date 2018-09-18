@@ -1,5 +1,5 @@
 publishDir = "../www2019" # relative to project root
-baseurl = "http://theory.ucr.edu/" # End your URL with a `/` trailing slash
+baseurl = "https://theory.ucr.edu/" # End your URL with a `/` trailing slash
 title = "UCR Particle Theory"
 copyright = "&copy; 2018 UCR Physics & Astronomy"
 theme = "academic"
