@@ -2,14 +2,14 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications on UCR Particle Theory</title>
-    <link>http://theory.ucr.edu/publication/</link>
+    <link>https://theory.ucr.edu/publication/</link>
     <description>Recent content in Publications on UCR Particle Theory</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 UCR Physics &amp; Astronomy</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0800</lastBuildDate>
     
-	<atom:link href="http://theory.ucr.edu/publication/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://theory.ucr.edu/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

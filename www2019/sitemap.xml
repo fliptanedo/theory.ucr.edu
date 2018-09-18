@@ -4,7 +4,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/post/</loc>
+      <loc>https://theory.ucr.edu/post/</loc>
       <lastmod>2017-01-01T00:00:00-08:00</lastmod>
     </url>
     
@@ -12,7 +12,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/publication/</loc>
+      <loc>https://theory.ucr.edu/publication/</loc>
       <lastmod>2017-01-01T00:00:00-08:00</lastmod>
     </url>
     
@@ -20,7 +20,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/talk/</loc>
+      <loc>https://theory.ucr.edu/talk/</loc>
       <lastmod>2017-01-01T00:00:00-08:00</lastmod>
     </url>
     
@@ -28,7 +28,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/categories/</loc>
+      <loc>https://theory.ucr.edu/categories/</loc>
       <priority>0</priority>
     </url>
     
@@ -36,7 +36,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/publication_types/</loc>
+      <loc>https://theory.ucr.edu/publication_types/</loc>
       <priority>0</priority>
     </url>
     
@@ -44,7 +44,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/tags/</loc>
+      <loc>https://theory.ucr.edu/tags/</loc>
       <priority>0</priority>
     </url>
     
@@ -52,7 +52,7 @@
     
     <url>
     
-      <loc>http://theory.ucr.edu/</loc>
+      <loc>https://theory.ucr.edu/</loc>
       <lastmod>2016-04-20T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
