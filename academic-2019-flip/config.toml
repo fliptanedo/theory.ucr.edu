@@ -1,0 +1,210 @@
+publishDir = "../www2019/flip" # relative to project root
+baseurl = "https://theory.ucr.edu/flip/"
+title = "Flip Tanedo "
+copyright = "&copy; 2018 Philip (Flip) Tanedo"
+theme = "academic"
+enableEmoji = true
+footnotereturnlinkcontents = "<sup>^</sup>"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+preserveTaxonomyNames = true
+paginate = 10
+disqusShortname = ""
+googleAnalytics = ""
+defaultContentLanguage = "en"
+hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
+defaultContentLanguageInSubdir = false
+enableGitInfo = false
+
+[outputs]
+  home = [ "HTML", "CSS", "RSS", "JSON" ]
+  section = [ "HTML", "RSS" ]
+
+[blackfriday]
+  hrefTargetBlank = true  # `true` opens external links in a new tab.
+  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
+  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
+
+[params]
+  color_theme = "fliptheme"
+  font = "flipfont"
+
+  # Your details.
+  name = "Flip Tanedo"
+  role = "Assistant Professor"
+  organizations = [ { name = "UCR Particle Theory", url = "http://theory.ucr.edu" } ]
+
+  gravatar = false  # Get your avatar from Gravatar.com? (true/false)
+  avatar = "profile/Flip600_sq.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
+  # email = "flip@example.org"
+  email1 = "flip.tanedo" # using cryptedmail
+  email2 = "ucr" # using cryptedmail
+  email3 = "edu" # using cryptedmail
+  address = "3054 Physics Building, University of California, Riverside, CA 92521, USA"
+  office_hours = "Email for appointment"
+  phone = "x26168"
+  # skype = "echo123"
+  # telegram = ""
+  keybase = ""
+
+  # Diplay a logo in navigation bar rather than title (optional).
+  logo = "" #   an image in `static/img/`
+
+  map = 0  #   0: No map, 1: Google Maps
+  map_api_key = ""
+  latitude = "33.9745"
+  longitude = "-117.3254"
+  zoom = 17
+
+  date_format = "Jan 2, 2006"
+  time_format = "3:04 PM"
+  reading_time = true
+  comment_count = true
+  section_pager = false
+  math = true # global LaTeX rendering
+  highlight = false # Highlight.js options
+  highlight_languages = []
+  sharing = false
+  privacy_pack = false
+
+  # Link custom CSS and JS assets
+  #   (relative to /static/css and /static/js respectively)
+  custom_css = ['flip2019layout.css', 'cryptedmail.css', 'flip2018.css', 'flipaboutme.css', 'slick.css', 'slick-theme.css', 'flipslick.css', 'flipiconlist.css', 'flipnav.css']
+  custom_js  = ['jquery-2.2.0.min.js', 'slick.js', 'flipslick.js']
+
+  # FOOTER PARAMETERS
+  footmark = "layout/feynmanfooter.png"
+  stacklogo = "logo/UCR_PhysicsAndAstro_Logo_fordarkBG3.png"
+  legalblurb = "All opinions expressed here are my own and do not necessarily represent those of any other agencies or groups."
+
+  # HEADER PARAMETERS
+  watermark = "background/Bundle3.jpg"
+
+
+  # Social/Academic Networking
+  #
+  # Icon pack "fab" includes the following social network icons:
+  #
+  #   twitter, weibo, linkedin, github, facebook, pinterest, google-plus,
+  #   youtube, instagram, soundcloud
+  #
+  #   For email icon, use "fas" icon pack, "envelope" icon, and
+  #   "mailto:your@email.com" as the link.
+  #
+  #   Full list: https://fontawesome.com/icons
+  #
+  # Icon pack "ai" includes the following academic icons:
+  #
+  #   cv, google-scholar, arxiv, orcid, researchgate, mendeley
+  #
+  #   Full list: https://jpswalsh.github.io/academicons/
+
+  # [[params.social]]
+  #   icon = "envelope"
+  #   icon_pack = "fas"
+  #   link = "mailto:flip.tanedo@ucr.edu"
+
+  [[params.social]]
+    icon = "inspire"
+    icon_pack = "ai"
+    link = "http://inspirehep.net/author/profile/P.Tanedo.1"
+    cv = true
+
+  [[params.social]]
+    icon = "google-scholar"
+    icon_pack = "ai"
+    link = "https://scholar.google.com/citations?hl=en&user=BQuJtTIAAAAJ&view_op=list_works&sortby=pubdate"
+    cv = true
+
+  [[params.social]]
+    icon = "orcid"
+    icon_pack = "ai"
+    link = "http://orcid.org/0000-0003-4642-2199"
+    cv = true
+
+  [[params.social]]
+    icon = "github"
+    icon_pack = "fab"
+    link = "//github.com/fliptanedo"
+    cv = true
+
+  [[params.social]]
+    icon = "arxiv"
+    icon_pack = "ai"
+    link = "https://arxiv.org/find/hep-ph/1/au:+Tanedo_P/0/1/0/all/0/1"
+    cv = true
+
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fab"
+    link = "//twitter.com/FlipTanedo"
+    cv = false
+
+  [[params.social]]
+    icon = "publons"
+    icon_pack = "ai"
+    link = "https://publons.com/author/637273/philip-tanedo#profile"
+    cv = true
+
+  [[params.social]]
+    icon = "slideshare"
+    icon_pack = "fab"
+    link = "https://www.slideshare.net/fliptanedo"
+    cv = false
+
+  [[params.social]]
+    icon = "tree"
+    icon_pack = "fas"
+    link = "https://academictree.org/physics/tree.php?pid=715850"
+    cv = false
+
+  [[params.social]]
+    icon = "cv"
+    icon_pack = "ai"
+    link = "files/Tanedo.pdf"
+    cv = false
+
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+[params.menus]
+  # Align the main menu to the right of the page? (true/false)
+  align_right = true
+
+[[menu.main]]
+  name = "Home"
+  url = "#about"
+  weight = 1
+
+[[menu.main]]
+  name = "CV"
+  url = "#CV"
+  weight = 2
+
+[[menu.main]]
+  name = "Research"
+  url = "#research"
+  weight = 3
+
+[[menu.main]]
+  name = "Teaching"
+  url = "#teaching"
+  weight = 4
+
+[[menu.main]]
+  name = "Engagement"
+  url = "#engagement"
+  weight = 5
+
+[[menu.main]]
+  name = "Students"
+  url = "#students"
+  weight = 6
+
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 7
+
+[languages.en]
+  languageCode = "en-us"

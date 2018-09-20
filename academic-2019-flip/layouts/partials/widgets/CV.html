@@ -1,0 +1,90 @@
+{{ $page := .page }}
+
+<!-- Custom widget -->
+<div class="row">
+  {{ if $page.Title }}
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+    <!--  -->
+    {{ if $page.Params.cv_pdf }}
+    <p>
+      <a class="btn btn-outline-primary btn-xs" href="{{ $page.Params.cv_pdf }}">
+        Download Complete CV
+      </a>
+      </p>
+    {{ end }}
+
+    {{ if $page.Params.group_logo }}
+    <p>
+      <img class="sidebarpic" src="{{ $.Site.BaseURL }}img/{{ $page.Params.group_logo }}">
+      <meta itemprop="image" content="{{ $page.Params.group_logo }}">
+    </p>
+    {{ end }}
+    <!--  -->
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ $page.Content }}
+
+    <!-- FLIP 2019  -->
+    <div class="row">
+
+      {{ with $page.Params.interests }}
+      <div class="col-md-5">
+        <h3>{{ i18n "interests" | markdownify }}</h3>
+        <ul class="ul-interests">
+          {{ range .interests }}
+          <li>{{ . | markdownify }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ with $page.Params.education }}
+      <div class="col-md-7">
+        <h3>{{ i18n "education" | markdownify }}</h3>
+        <ul class="ul-edu fa-ul">
+          {{ range .courses }}
+          <!-- <li> -->
+            {{ if .logo }}
+              <img src="{{ $.Site.BaseURL }}img/{{ .logo }}" style="height:1rem; float: left; padding-right: 10px;">
+            {{ else }}
+              <i class="fa-li fas fa-graduation-cap"></i>
+            {{ end }}
+            <div class="description">
+              <!-- <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
+              <p class="institution">{{ .institution }}</p> -->
+              {{ .course_short }}
+              {{ with .institution_short }}, {{ . }}{{ end }}
+              {{ with .year }}({{ . }}){{ end }}
+              <br />
+            </div>
+          <!-- </li> -->
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+    </div>
+
+    {{ with $page.Params.service }}
+      <p style="font-size: .8rem;">
+        <b>Service</b>:
+        {{ range .service }}
+        {{ . | markdownify }} ,
+        {{ end }}
+      </p>
+    {{ end }}
+
+    <!-- /FLIP 2019 -->
+  </div> <!-- col-12 col-lg-8 -->
+
+
+
+
+  {{ else }}
+  <div class="col-lg-12">
+    {{ $page.Content }}
+  </div>
+  {{ end }}
+</div>
