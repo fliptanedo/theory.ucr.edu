@@ -1,0 +1,62 @@
+/* FOR STUDENT LIST IN RESEARCH */
+/*https://stackoverflow.com/questions/34667466/how-to-center-this-horizontal-list-of-images*/
+/*better: https://stackoverflow.com/questions/19645931/inline-images-with-captions-centered-under-each*/
+.ul-students{
+  font-family: 'Raleway', sans-serif;
+  color: #AAAAAA;
+}
+
+.ul-students:after {
+  content: attr(title);
+  display: block;
+  text-align: center;
+}
+
+.ul-students ul {
+  text-align: center;
+  padding: 0;
+}
+
+.ul-students li {
+  width: 25%;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: .75rem;
+}
+
+.ul-students li img {
+  max-width: 80%;
+  height: auto;
+}
+
+/* STUDENT photos on index.html */
+.studentpic{
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+
+/* FOR CLASS LIST IN TEACHING */
+.teaching{
+  font-family: 'Raleway', sans-serif;
+  font-size: .75rem;
+  color: #AAAAAA;
+  vertical-align: text-top;
+  padding: 0;
+}
+
+.smaller{
+  font-size: .6rem;
+}
+
+/* STUDENT photos on index.html */
+.teachingpic{
+  border-radius: 10px;
+  /* text-align: center; */
+  /* margin: 0 auto; */
+  max-width: 80%;
+  vertical-align: text-top;
+}
