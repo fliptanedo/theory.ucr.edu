@@ -1,13 +1,11 @@
 README-WWW2019
 
-academic-flip: website early 2019
-academic-kickstart: old
-
 SEPTEMBER 2019
 
 academic-2019-flipucr: personal website, to be put into theory.ucr subdir
 academic-2019-ucrhep: redo of UCR websie
 
+Hugo Theme Academic Source:
 https://sourcethemes.com/academic/docs/install/
 
 DIRECTORY STRUCTURE
