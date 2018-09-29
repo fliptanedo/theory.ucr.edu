@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Flip Tanedo  on Flip Tanedo </title>
+    <link>https://theory.ucr.edu/flip/</link>
+    <description>Recent content in Flip Tanedo  on Flip Tanedo </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 Philip (Flip) Tanedo&lt;br/&gt;Hosted on [GitHub](https://github.com/fliptanedo/theory.ucr.edu), Served by [Netlify](https://ucrtheory.netlify.com).</copyright>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0700</lastBuildDate>
+    <atom:link href="/flip/" rel="self" type="application/rss+xml" />
+    
+  </channel>
+</rss>
