@@ -1,5 +1,7 @@
 # UCR hep-ph group website Readme
 
+by Flip Tanedo (flip.tanedo@ucr.edu)
+
 ## Credit
 
 This is a modified version of George Cushen's *Academic* theme for Hugo. Flip Tanedo modified this theme starting in 2017 for the University of California, Riverside Particle Theory group website. See the default *Academic* kickstart readme below.
@@ -13,6 +15,8 @@ www_2019
     └-- [other files]
 +-- academic-flip
 +-- academic-kickstart
++-- www2019
+    └-- flip
 README.txt
 ```
 
@@ -56,7 +60,25 @@ This means that need to place an `icon.png` and an `icon-192.png` file in the `/
 
 * Note: the latest version of Hugo uses Bootstrap 4. The previous version of the group website used Bootstrap 3. This means that all of my partials have incorrect grids. This can be tricky to sort out and has forced me to be careful with indentation. Use `\themes\...\custom.html` as a template.
 
+* New in this version: grayscale "emeritus/past student" blocks on the rosters. This is "automatic" and is straightforward to. The relevant markdown files have variables like:
+```markdown
+haspast = true
+recenttitle = "Emeritus Faculty"
+```
+and each individual now has options for variables:
+```markdown  
+  past = true
+  start = "2017"
+  end = "2018"
+```
 
+## Deploying
+
+I deployed this on Netlify. The only tricky thing was to put in the hugo build command. The GitHub repository has this hugo project as a subdirectory (see directory structure above) and outputs to a deploy directory that is on the same level (not a subdirectory) of the hugo project. You thus have to tell Netlify to run hugo in a subdirectory.
+```
+Build command: cd academic-2019-ucrhep ; hugo ; cd ..
+Publish directory: www2019
+```
 
 
 # Academic Kickstart (Default Readme)

@@ -55,7 +55,7 @@ weight = 25
 
 [[mygroup.faculty]]
   name = "Brian Shuve"
-  position = "Research Scientist (UCR) & Asst. Prof. (HMU)"
+  position = "Research Scientist (UCR) & Asst. Prof. (HMC)"
   photo = "./img/group/template_brian.jpg"
   website = "https://brian-shuvewilson.squarespace.com"
   inspire = "http://inspirehep.net/author/profile/B.Shuve.1"
