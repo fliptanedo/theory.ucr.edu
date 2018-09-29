@@ -1,0 +1,37 @@
+{{ $page := .page }}
+
+<!-- Custom widget -->
+<div class="row">
+  {{ if $page.Title }}
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+
+    <!-- FLIP 2019 -->
+
+    <div class="row">
+      {{ with $page.Params.teaching }}
+        {{ range .class }}
+          <div class="col-3 teaching">
+            <a href="{{ .website }}"><img class="teachingpic" src="{{ $.Site.BaseURL }}img/teaching/{{ .photo }}"></a>
+            <a href="{{ .website }}">{{ .number }}, {{ .session }}</a> <br />
+            <span class="smaller">{{ .name }}</span>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+
+    <!-- /FLIP 2019 -->
+
+    {{ $page.Content }}
+  </div>
+
+
+  {{ else }}
+  <div class="col-lg-12">
+    {{ $page.Content }}
+  </div>
+  {{ end }}
+</div>

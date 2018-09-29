@@ -1,0 +1,62 @@
+{{ $page := .page }}
+
+<!-- Custom widget -->
+<div class="row">
+  {{ if $page.Title }}
+  <div class="col-12 col-lg-4 section-heading">
+    <h1>{{ with $page.Title }}{{ . | markdownify }}{{ end }}</h1>
+    {{ with $page.Params.subtitle }}<p>{{ . | markdownify }}</p>{{ end }}
+  </div>
+  <div class="col-12 col-lg-8">
+    {{ $page.Content }}
+
+
+    <!-- FLIP 2019 -->
+      {{ with $page.Params.mygroup }}
+        <ul class="ul-students">
+          {{ range .students }}
+            <li class="ul-students" title="{{ .name }}">
+              <a href="{{ .website }}"><img class="studentpic" src="{{ $.Site.BaseURL }}img/students/{{ .photo }}"></a>
+            </li>
+          {{ end }}
+        </ul>
+      {{ end }}
+
+    <p>
+      <span class="comment">* - co-advised</span>
+    </p>
+
+    <div class="row comment">
+      <h5>Past Students</h5>
+    </div>
+
+    {{ with $page.Params.mygroup }}
+      {{ range .oldstudents }}
+        <div class="row comment">
+          <div class="col-xs-3">
+            <a href="{{ .website }}" class=comment>
+              {{ .name }}&nbsp;
+            </a>
+          </div>
+          <div class="col-xs-3">
+            {{ .start }} - {{ .end }}
+          </div>
+          <div class="col-xs-6">
+            {{ .position }}, {{ .role }}
+          </div>
+        </div>
+      {{ end }}
+    {{ end }}
+
+
+    <!-- /FLIP 2019 -->
+
+
+
+  </div>
+  {{ else }}
+  <div class="col-lg-12">
+    {{ $page.Content }}
+  </div>
+  {{ end }}
+</div>
