@@ -1,0 +1,107 @@
+<div style="position: relative; width: 0; height: 0">
+    <div id="feynmanfoot" style="background-image:url('{{ $.Site.BaseURL }}/img/{{ .Site.Params.footmark }}');"></div>
+</div>
+<div id="botbar1"></div>
+<!--  -->
+<!--  -->
+<!--  -->
+<!-- OLD FOOTER: default academic style -->
+<!-- <footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      {{ with .Site.Copyright }}{{ . | markdownify}} &middot; {{ end }}
+
+      Powered by the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer> -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  FLIP's NEW FOOTER  -->
+<footer class="site-footer">
+  <div class="container">
+    <!-- <br /> -->
+
+    <div class="row" style="padding-top: 35px;">
+      <div class="col-sm-4" id="footer-col-1">
+        <!-- <i class="fa fa-envelope" aria-hidden="true" style="padding-right:2px;"></i> <a data-name="{{ $.Site.Params.email1 }}" data-domain="{{ $.Site.Params.email2 }}" data-tld="{{ $.Site.Params.email3 }}" href="#" class="cryptedmail" onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld" style="font-family: 'Titillium Web', sans-serif;"></a> -->
+        <!-- <br /> -->
+        {{ with $.Site.Params.address_long }}{{ . | markdownify}}{{ end }}
+      </div>
+      <div class="col-sm-4" id="footer-col-2">
+        UC Riverside Physics & Astronomy
+        <img src="{{ $.Site.BaseURL }}img/{{ $.Site.Params.uni_white_logo }}">
+        <!-- <br />
+        Physics & Astronomy<br />
+        Particle Theory -->
+      </div>
+      <div class="col-sm-4" id="footer-col-3">
+        Adapted from the
+        <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+        <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+        <!-- <br /> -->
+        {{ with .Site.Copyright }}{{ . | markdownify}} {{ end }}
+      </div>
+    </div>
+
+    <p class="powered-by">
+
+      <!-- {{ with .Site.Copyright }}{{ . | markdownify}} &middot; {{ end }} -->
+
+      <!-- Adapted from the
+      <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+      <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>. -->
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+<!--  -->
+<!--  -->
+<!--  -->
+
+<!-- Citation modal -->
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-large" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">{{ i18n "btn_cite" }}</h4>
+      </div>
+      <div>
+        <pre><code class="modal-body tex"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-primary btn-outline js-copy-cite" href="#" target="_blank">
+          <i class="fa fa-copy"></i> {{ i18n "btn_copy" }}
+        </a>
+        <a class="btn btn-primary btn-outline js-download-cite" href="#" target="_blank">
+          <i class="fa fa-download"></i> {{ i18n "btn_download" }}
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div> <!--  ends id=#THECONTENT from navbar.html; see flip2017.css -->

@@ -1,0 +1,64 @@
+.comment{
+  font-family: 'Raleway', sans-serif;
+  color: #AAAAAA;
+  font-size: .8rem;
+}
+
+/* FOR SPONSORING AGENCIES */
+
+img[alt=logo] {
+  height: 50px;
+  display: inline-block;
+  padding: 10px 15px 0px 0px;
+}
+
+/* For profile pictures */
+
+.incircle {
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.inrectangle {
+  border-radius: 5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* For google calendar */
+/* https://thomas.vanhoutte.be/miniblog/make-google-calendar-iframe-responsive/ */
+
+.responsiveCal {
+  position: relative; padding-bottom: 50%; height: 0; overflow: hidden;
+}
+
+.responsiveCal iframe {
+  position: absolute; top:0; left: 0; width: 100%; height: 100%;
+}
+
+
+/* FOR FOOTER INFO */
+
+#footer-col-1, #footer-col-2, #footer-col-3{
+  font-size : .75rem;
+  padding-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size : .65rem;
+}
+
+#footer-col-2 img{
+  /* opacity: .5; */
+  max-width: 200px;
+}
+
+#footer-col-2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size : .65rem;
+}
