@@ -192,7 +192,7 @@ enableGitInfo = false
   weight = 4
 
 [[menu.main]]
-  name = "Engagement"
+  name = "Public"
   url = "#engagement"
   weight = 5
 

@@ -7,7 +7,7 @@ active = true
 date = 2016-04-20T00:00:00
 
 # Note: a full width section format can be enabled by commenting out the `title` and `subtitle` with a `#`.
-title = "Students"
+title = "Team"
 subtitle = ""
 
 # Order that this section will appear in.
@@ -30,19 +30,35 @@ weight = 30
   website = "https://github.com/agree019"
 
 [[mygroup.students]]
-  name = "Corey Kownacki*"
-  position = "Grad"
-  start = "2017"
-  photo = "template_corey.jpg"
-  website = "http://theory.ucr.edu/group.html"
-
-[[mygroup.students]]
   name = "Kuntal Pal*"
   position = "Grad"
   start = "2018"
   photo = "template_kuntal.jpg"
   website = "http://theory.ucr.edu/group.html"
 
+[[mygroup.students]]
+  name = "Lexi Costantino"
+  start = "2018"
+  position = "Grad"
+  photo = "template_lexi.jpg"
+  website = "http://theory.ucr.edu/group.html"
+
+[[mygroup.students]]
+  name = "Sergio Garcia"
+  start = "2018"
+  position = "NMC Mentee"
+  photo = "template_sergio.jpg"
+  website = "http://theory.ucr.edu/group.html"
+
+
+
+[[mygroup.oldstudents]]
+  name = "Corey Kownacki*"
+  position = "Grad"
+  start = "2017"
+  end = "18"
+  photo = "template_corey.jpg"
+  website = "http://theory.ucr.edu/group.html"
 
 [[mygroup.oldstudents]]
   name = "Syris Norelli"

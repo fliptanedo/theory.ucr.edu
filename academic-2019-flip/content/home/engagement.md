@@ -20,6 +20,7 @@ weight = 15
 
 ## Appearances
 
+* [*UCR Magazine*](https://medium.com/ucr-magazine/flip-tanedo-assistant-professor-physics-and-astronomy-b98c51bfa405) 11/21/2018
 * [*Science Friday*]((https://www.sciencefriday.com/segments/dark-matter-eludes-particle-physicists/)) [[SciFri Bio](https://www.sciencefriday.com/person/flip-tanedo/)] 06/08/2018
 * [Interview with Space.com](https://www.facebook.com/spacecom/videos/space-com-talks-%27nova-wonders:/10155409335906466/) 05/30/18
 * [*NOVA Wonders*](https://www.pbs.org/video/nova-wonders-whats-the-universe-made-of-2eyoyw/) 04/04/18
