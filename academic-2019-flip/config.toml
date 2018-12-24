@@ -23,6 +23,7 @@ enableGitInfo = false
   hrefTargetBlank = true  # `true` opens external links in a new tab.
   fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
   smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
+  extensions = ["backslashLineBreak"]
 
 [params]
   color_theme = "fliptheme"
@@ -205,6 +206,17 @@ enableGitInfo = false
   name = "Contact"
   url = "#contact"
   weight = 7
+
+# Search.
+[params.search]
+  # Search provider:
+  #   0: No search engine
+  #   1: Built-in (Fuse)
+  #   2: Algolia (https://www.algolia.com)
+  engine = 0
+
+
+
 
 [languages.en]
   languageCode = "en-us"
