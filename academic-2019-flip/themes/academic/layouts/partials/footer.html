@@ -2,14 +2,8 @@
 
     {{/* Config LaTeX math rendering. */}}
     {{ if or .Params.math .Site.Params.math }}
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        CommonHTML: { linebreaks: { automatic: true } },
-        tex2jax: { inlineMath: [ ['$', '$'], ['\\(','\\)'] ], displayMath: [ ['$$','$$'], ['\\[', '\\]'] ], processEscapes: false },
-        TeX: { noUndefined: { attributes: { mathcolor: 'red', mathbackground: '#FFEEEE', mathsize: '90%' } } },
-        messageStyle: 'none'
-      });
-    </script>
+    {{ $mathjax_config := resources.Get "js/mathjax-config.js" }}
+    <script src="{{ $mathjax_config.RelPermalink }}"></script>
     {{ end }}
 
     {{/* Attempt to load local vendor JS, otherwise load from CDN. */}}
@@ -37,11 +31,6 @@
       {{ end }}
     {{ end }}
 
-    <script src="{{ "/js/hugo-academic.js" | relURL }}"></script>
-    {{ range .Site.Params.custom_js }}
-    <script src="{{ "/js/" | relURL }}{{ . }}"></script>
-    {{ end }}
-
     {{/* Maps JS. */}}
     {{ if eq .Site.Params.map 1 }}
       <script async defer src="//maps.googleapis.com/maps/api/js?key={{ .Site.Params.map_api_key }}"></script>
@@ -66,7 +55,7 @@
     {{ if ne .Site.Params.search.engine 0 }}
     {{/* Configure search engine. */}}
     <script>
-      const search_index_filename = {{ "/index.json" | relURL }};
+      const search_index_filename = {{ "/index.json" | relLangURL }};
       const i18n = {
         'placeholder': {{ i18n "search_placeholder" }},
         'results': {{ i18n "search_results" }},
@@ -121,7 +110,6 @@
     {{ if eq .Site.Params.search.engine 1 }}
     {{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.fuse.url $js.fuse.version) $js.fuse.sri | safeHTML }}
     {{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.mark.url $js.mark.version) $js.mark.sri | safeHTML }}
-    <script src="{{ "/js/search.js" | relURL }}"></script>
     {{ end }}
 
     {{/* Algolia search engine. */}}
@@ -130,72 +118,27 @@
     {{ printf "<script src=\"%s\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" (printf $js.instantsearch.url $js.instantsearch.version) $js.instantsearch.sri | safeHTML }}
     {{ end }}
     <script>
-      if ( $('#search-box').length ) {
-        function getTemplate(templateName) {
-          return document.querySelector(`#${templateName}-template`).innerHTML;
-        }
-
-        const options = {
-          appId: {{ .Site.Params.search.algolia.app_id }},
-          apiKey: {{ .Site.Params.search.algolia.api_key }},
-          indexName: {{ .Site.Params.search.algolia.index_name }},
-          routing: true,
-          searchParameters: {
-            hitsPerPage: 10
-          },
-          searchFunction: function(helper) {
-            let searchResults = document.querySelector('#search-hits')
-            if (helper.state.query === '') {
-              searchResults.style.display = 'none';
-              return;
-            }
-            helper.search();
-            searchResults.style.display = 'block';
-          }
-        };
-
-        const search = instantsearch(options);
-
-        // Initialize search box.
-        search.addWidget(
-          instantsearch.widgets.searchBox({
-            container: '#search-box',
-            autofocus: false,
-            reset: true,
-            poweredBy: {{ .Site.Params.search.algolia.show_logo | default false }},
-            placeholder: i18n.placeholder
-          })
-        );
-
-        // Initialize search results.
-        search.addWidget(
-          instantsearch.widgets.infiniteHits({
-            container: '#search-hits',
-            escapeHits: true,
-            templates: {
-              empty: '<div class="search-no-results">' + i18n.no_results + '</div>',
-              item: getTemplate('search-hit-algolia')
-            },
-            cssClasses: {
-              showmoreButton: 'btn btn-outline-primary'
-            }
-          })
-        );
-
-        // On render search results, localize the content type metadata.
-        search.on('render', function() {
-          $('.search-hit-type').each(function( index ) {
-            let content_key = $( this ).text();
-            if (content_key in content_type) {
-              $( this ).text(content_type[content_key]);
-            }
-          });
-        });
-
-        // Start search.
-        search.start();
-      }
+      const algoliaConfig = {
+        appId: {{ .Site.Params.search.algolia.app_id }},
+        apiKey: {{ .Site.Params.search.algolia.api_key }},
+        indexName: {{ .Site.Params.search.algolia.index_name }},
+        poweredBy: {{ .Site.Params.search.algolia.show_logo | default false }}
+      };
     </script>
+    {{ end }}
+
+    {{ $js_comment := printf "/* Source Themes Academic v%s | https://sourcethemes.com/academic/ */\n" .Site.Data.academic.version }}
+    {{ $js_bundle_head := $js_comment | resources.FromString "js/bundle-head.js" }}
+    {{ $js_academic := resources.Get "js/academic.js" }}
+    {{ $js_academic_search := resources.Get "js/academic-search.js" }}
+    {{ $js_algolia_search := resources.Get "js/algolia-search.js" }}
+    {{ $js_bundle := slice $js_academic $js_academic_search }}
+    {{ $js_bundle := $js_bundle | resources.Concat "js/academic-bundle-pre.js" | minify }}
+    {{ $js_bundle := slice $js_bundle_head $js_bundle | resources.Concat "js/academic.min.js" | fingerprint "md5" }}
+    <script src="{{ $js_bundle.RelPermalink }}"></script>
+
+    {{ range .Site.Params.custom_js }}
+    <script src="{{ "/js/" | relURL }}{{ . }}"></script>
     {{ end }}
 
   </body>

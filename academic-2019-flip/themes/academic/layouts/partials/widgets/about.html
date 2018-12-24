@@ -7,9 +7,9 @@
     <div id="profile">
 
       {{ if $.Site.Params.gravatar }}
-      <img class="portrait" src="https://s.gravatar.com/avatar/{{ md5 $.Site.Params.email }}?s=200')" itemprop="image">
+      <img class="portrait" src="https://s.gravatar.com/avatar/{{ md5 $.Site.Params.email }}?s=200')" itemprop="image" alt="Avatar">
       {{ else if $.Site.Params.avatar }}
-      <img class="portrait" src="{{ (printf "img/%s" $.Site.Params.avatar) | relURL }}" itemprop="image">
+      <img class="portrait" src="{{ (printf "img/%s" $.Site.Params.avatar) | relURL }}" itemprop="image" alt="Avatar">
       {{ end }}
 
       <div class="portrait-title">
@@ -43,8 +43,16 @@
         {{ if in (slice "fab" "fas" "far" "fal") $pack }}
           {{ $pack_prefix = "fa" }}
         {{ end }}
+        {{ $link := .link }}
+        {{ $scheme := (urls.Parse $link).Scheme }}
+        {{ $target := "" }}
+        {{ if not $scheme }}
+          {{ $link = .link | relLangURL }}
+        {{ else if in (slice "http" "https") $scheme }}
+          {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
+        {{ end }}
         <li>
-          <a itemprop="sameAs" href="{{ .link | safeURL }}" target="_blank" rel="noopener">
+          <a itemprop="sameAs" href="{{ $link | safeURL }}" {{ $target | safeHTMLAttr }}>
             <i class="{{ $pack }} {{ $pack_prefix }}-{{ .icon }} big-icon"></i>
           </a>
         </li>

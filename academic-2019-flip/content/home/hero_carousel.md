@@ -1,7 +1,7 @@
 +++
 # Hero Carousel widget.
 widget = "hero_carousel"
-active = true
+active = false
 date = 2017-10-15T00:00:00
 
 # Order that this section will appear in.
